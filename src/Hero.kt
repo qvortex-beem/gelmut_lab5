@@ -1,11 +1,21 @@
 class Hero {
-    var name: String = "Неизвестный"
-    var gender: String = "Не указан"
-    var role: String = "Бродяга"
-    var hp: Int = 100
-    var mp: Int = 50
-    var level: Int = 1
-    var element: String = "Огонь"
+    val name: String
+    val gender: String
+    var role: String
+    var hp: Int
+    var mp: Int
+    var level: Int
+    val element: String
+
+    constructor(name: String, gender: String, role: String, hp: Int, mp: Int,level: Int, element: String) {
+        this.name = name
+        this.gender = gender
+        this.role = role
+        this.hp = hp
+        this.mp = mp
+        this.level = level
+        this.element = element
+    }
 
     fun sayHello() {
         println("Я $name, мой путь только начинается!")

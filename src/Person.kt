@@ -73,22 +73,12 @@ fun main() { // шаг 5
 //    println("Наруто увидел врага ${orochimaru.name}! Его здоровье - ${orochimaru.hp}")
 //    naruto.attack(orochimaru, 25)
 
-    val naruto = Hero()
-    naruto.name = "Наруто"
-    naruto.role = "Шиноби"
-    naruto.element = "Ветер"
-    naruto.mp = 100
-
-    val kakashi = Hero()
-    kakashi.name = "Какаши"
-    kakashi.role = "Шиноби"
-    kakashi.element = "Молния"
-    kakashi.mp = 100
-
-    val ororchimaru = Enemy()
-    ororchimaru.name = "Орочимару"
-    ororchimaru.element = "Ветер"
-
-    naruto.castSpellOn(ororchimaru, "Расенган", 30)
-    naruto.duel(kakashi)
+//    val naruto = Hero("наруто", "мужской", "шиноби", 100, 200, 5, "ветер")
+//
+//    val kakashi = Hero("какаши", "мужской", "шиноби", 250, 300, 15, "молния")
+//
+//    val ororchimaru = Enemy("орочимару", 350, "ветер")
+//
+//    naruto.castSpellOn(ororchimaru, "Расенган", 30)
+//    naruto.duel(kakashi)
 }

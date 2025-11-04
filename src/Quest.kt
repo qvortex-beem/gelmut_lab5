@@ -1,10 +1,10 @@
 class Quest {
-    var title: String = "БЕзымячнное задание"
-    var duration: Int = 1
-    var reward: Int = 100
-    var difficulty: String = "Легкий"
+    val title: String
+    val duration: Int
+    val reward: Int
+    val difficulty: String
 
-    fun init(title: String, duration: Int, reward: Int, difficulty: String) {
+    constructor (title: String, duration: Int, reward: Int, difficulty: String) {
       this.title = title
       this.duration = duration
       this.reward = reward

@@ -1,7 +1,13 @@
 class Enemy {
-    var name: String = "Враг"
-    var hp: Int = 50
-    var element: String = "Ветер"
+    val name: String
+    var hp: Int
+    val element: String
+
+    constructor(name: String, hp: Int, element: String) {
+        this.name = name
+        this.hp = hp
+        this.element = element
+    }
 
     fun takeDamage(amount: Int) {
         println("Получено $amount урона")
