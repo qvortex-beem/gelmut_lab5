@@ -15,4 +15,12 @@ class Spell(
             println()
         }
     }
+
+    fun area() : Int {
+        return width*height
+    }
+
+    fun description() : String {
+        return "Заклинание ${name.lowercase()} занимает область ${width}x${height} и использует символ ${symbol}"
+    }
 }

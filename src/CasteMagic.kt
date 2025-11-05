@@ -3,4 +3,7 @@ fun main() {
     fireWall.cast()
     val waterHit = Spell("Водяной удар", 10,1, "\uD83C\uDF0A")
     waterHit.cast()
+
+    println(fireWall.area())
+    println(waterHit.area())
 }

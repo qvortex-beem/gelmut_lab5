@@ -39,4 +39,7 @@ fun main() {
 //        q.printInfo()
 //    }
 
+    val quest = Quest("Побег из замка", 5, 700, "сложный")
+    println("Квест сложный? ${quest.isHard()}")
+
 }

@@ -1,21 +1,12 @@
-class Hero {
-    val name: String
-    val gender: String
-    var role: String
-    var hp: Int
-    var mp: Int
-    var level: Int
-    val element: String
-
-    constructor(name: String, gender: String, role: String, hp: Int, mp: Int,level: Int, element: String) {
-        this.name = name
-        this.gender = gender
-        this.role = role
-        this.hp = hp
-        this.mp = mp
-        this.level = level
-        this.element = element
-    }
+class Hero(
+    val name: String = "безымянный",
+    val gender: String = "мужской",
+    var role: String = "отсутствует",
+    var hp: Int = 1,
+    var mp: Int = 1,
+    var level: Int = 1,
+    val element: String = "обнинск"
+) {
 
     fun sayHello() {
         println("Я $name, мой путь только начинается!")
@@ -95,5 +86,26 @@ class Hero {
         println("Состояние героев:")
         this.showStats()
         opponent.showStats()
+    }
+
+    fun isAlive() : Boolean {
+        return hp > 0
+    }
+
+    fun canAcceptQuest(quest: Quest) : Boolean {
+        val canAccept = when (quest.difficulty.lowercase()) {
+            "легкий" -> level >= 1
+            "средний" -> level >= 3
+            "сложный" -> level >= 5
+            else -> false
+        }
+
+        if (canAccept) {
+            println("$name ожет принять квест «${quest.title}»!")
+        } else {
+            println("$name не может принять квест «${quest.title}». Требуется более высокий уровень.")
+        }
+
+        return canAccept
     }
 }

@@ -1,13 +1,8 @@
-class Enemy {
-    val name: String
-    var hp: Int
-    val element: String
-
-    constructor(name: String, hp: Int, element: String) {
-        this.name = name
-        this.hp = hp
-        this.element = element
-    }
+class Enemy(
+    val name: String = "безымянный",
+    var hp: Int = 1,
+    val element: String = "обнинск"
+) {
 
     fun takeDamage(amount: Int) {
         println("Получено $amount урона")
@@ -15,4 +10,18 @@ class Enemy {
         if (hp < 0) hp = 0
         println("Осталось здоровья: $hp")
     }
+
+    fun isStrong() : Boolean {
+        return hp > 100
+    }
+
+    fun getThreatLevel(): String {
+        return when {
+            hp <= 50 -> "низкий"
+            hp >= 150 -> "средний"
+            else -> "высокий"
+        }
+    }
+
+
 }
